@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { MapPin, ArrowRight } from "lucide-react";
+import { USFlag, CAFlag, EUFlag } from "./FlagIcons";
 import styles from "./SupplyMap.module.css";
 
 const SUPPLY_REGIONS = [
@@ -9,7 +10,7 @@ const SUPPLY_REGIONS = [
     id: "usa",
     name: "United States",
     hub: "Dallas, TX — HQ & Manufacturing",
-    flag: "🇺🇸",
+    flag: <USFlag size={18} />,
     details: "Primary manufacturing center, steel mold fabrication yard, and distribution hub supplying precast concrete plants across the continental USA.",
     stats: [
       { label: "Production Area", value: "120,000 sq ft" },
@@ -23,7 +24,7 @@ const SUPPLY_REGIONS = [
     id: "canada",
     name: "Canada",
     hub: "Toronto, ON — Regional Hub",
-    flag: "🇨🇦",
+    flag: <CAFlag size={18} />,
     details: "Sales and technical support division serving Canadian precast concrete manufacturers. Rapid cross-border logistics with USA production facility.",
     stats: [
       { label: "Provinces Served", value: "All 10" },
@@ -37,7 +38,7 @@ const SUPPLY_REGIONS = [
     id: "europe",
     name: "Europe",
     hub: "Hamburg, Germany — Engineering Office",
-    flag: "🇪🇺",
+    flag: <EUFlag size={18} />,
     details: "Engineering head office and European logistics hub serving precast contractors from Western to Central Europe. FEA simulation division based here.",
     stats: [
       { label: "Countries Served", value: "18 EU Nations" },

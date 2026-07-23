@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Mail, Phone, Clock, Linkedin, ChevronDown, ArrowRight, Menu, X, Layers, Box, Settings, DraftingCompass, CheckCircle } from "lucide-react";
+import { USFlag, CAFlag, EUFlag } from "./FlagIcons";
 import styles from "./Header.module.css";
 
 const scrollTo = (id) => {
@@ -91,9 +92,9 @@ export default function Header() {
           </div>
           <div className={styles.utilityDivider} />
           <div className={styles.regionBadges}>
-            <span className={styles.regionFlag}>🇺🇸 USA</span>
-            <span className={styles.regionFlag}>🇨🇦 Canada</span>
-            <span className={styles.regionFlag}>🇪🇺 Europe</span>
+            <span className={styles.regionFlag}><USFlag size={14} /> USA</span>
+            <span className={styles.regionFlag}><CAFlag size={14} /> Canada</span>
+            <span className={styles.regionFlag}><EUFlag size={14} /> Europe</span>
           </div>
           <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
             <Linkedin size={14} />
