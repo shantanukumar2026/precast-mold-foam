@@ -1,0 +1,206 @@
+.sectionBg {
+  background-color: var(--neutral-white);
+  border-bottom: 1px solid var(--neutral-mid-gray);
+}
+
+.doubleColGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 6rem;
+  align-items: flex-start;
+}
+
+/* Left: Download Center */
+.downloadCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.subTitle {
+  color: var(--accent-orange);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.mainTitle {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--primary-dark);
+  margin-bottom: 1.5rem;
+}
+
+.desc {
+  font-size: 0.95rem;
+  color: var(--neutral-text-muted);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.downloadList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.downloadCard {
+  background-color: var(--neutral-light-gray);
+  border: 1px solid var(--neutral-mid-gray);
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: var(--transition-smooth);
+  text-decoration: none;
+}
+
+.downloadCard:hover {
+  background-color: var(--neutral-white);
+  border-color: var(--primary-royal);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.02);
+}
+
+.docInfo {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.docIcon {
+  color: var(--primary-royal);
+  flex-shrink: 0;
+}
+
+.docMeta {
+  display: flex;
+  flex-direction: column;
+}
+
+.docTitle {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--primary-dark);
+}
+
+.docSize {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--neutral-text-muted);
+  margin-top: 0.15rem;
+}
+
+.downloadBtn {
+  color: var(--accent-orange);
+  transition: var(--transition-smooth);
+}
+
+.downloadCard:hover .downloadBtn {
+  transform: translateY(2px);
+}
+
+/* Right: Request Quote Form (Need a Custom Mold?) */
+.quoteFormBox {
+  background-color: var(--neutral-light-gray);
+  border: 1px solid var(--neutral-mid-gray);
+  border-top: 4px solid var(--accent-orange);
+  padding: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.formHeader {
+  margin-bottom: 2rem;
+}
+
+.formTitle {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--primary-dark);
+  margin-bottom: 0.5rem;
+}
+
+.formSubtitle {
+  font-size: 0.85rem;
+  color: var(--neutral-text-muted);
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.spanFull {
+  grid-column: span 2;
+}
+
+.inputLabel {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--primary-dark);
+  letter-spacing: 0.5px;
+}
+
+.formInput {
+  background-color: var(--neutral-white);
+  border: 1px solid var(--neutral-mid-gray);
+  padding: 0.85rem 1rem;
+  font-family: var(--font-family);
+  font-size: 0.875rem;
+  color: var(--neutral-dark-gray);
+  transition: var(--transition-smooth);
+}
+
+.formInput:focus {
+  outline: none;
+  border-color: var(--primary-royal);
+  box-shadow: 0 0 0 3px rgba(18, 67, 133, 0.05);
+}
+
+.formSelect {
+  background-color: var(--neutral-white);
+  border: 1px solid var(--neutral-mid-gray);
+  padding: 0.85rem 1rem;
+  font-family: var(--font-family);
+  font-size: 0.875rem;
+  color: var(--neutral-dark-gray);
+  cursor: pointer;
+}
+
+.formTextarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.submitBtn {
+  margin-top: 1.5rem;
+  width: 100%;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .doubleColGrid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+  .spanFull {
+    grid-column: span 1;
+  }
+  .quoteFormBox {
+    padding: 2rem;
+  }
+}

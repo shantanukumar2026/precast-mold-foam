@@ -1,0 +1,123 @@
+.sectionBg {
+  background-color: var(--h2-navy);
+  color: var(--h2-white);
+  width: 100%;
+}
+
+.sectionHeader {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 4rem auto;
+}
+
+.sectionSub {
+  color: var(--accent-orange);
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.sectionTitle {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--h2-white);
+}
+
+.headerText {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.65);
+  margin-top: 0.5rem;
+  line-height: 1.6;
+}
+
+/* Grid Layout */
+.industriesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background-color: rgba(33, 150, 243, 0.08);
+}
+
+.industryCard {
+  background-color: rgba(10, 25, 41, 0.95);
+  border: none;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 300px;
+  transition: var(--transition-smooth);
+  border-top: 3px solid transparent;
+}
+
+.industryCard:hover {
+  background-color: var(--h2-blue-dark);
+  border-top-color: var(--accent-orange);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+}
+
+.iconWrapper {
+  color: var(--h2-blue-light);
+  margin-bottom: 1.5rem;
+  transition: var(--transition-smooth);
+}
+
+.industryCard:hover .iconWrapper {
+  color: #fff;
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--h2-white);
+  margin-bottom: 0.65rem;
+}
+
+.cardDesc {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.55;
+  transition: var(--transition-smooth);
+}
+
+.industryCard:hover .cardDesc {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.industryLink {
+  margin-top: auto;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--h2-blue-light);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: var(--transition-smooth);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.industryCard:hover .industryLink {
+  color: #fff;
+}
+
+@media (max-width: 1200px) {
+  .industriesGrid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .industriesGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .industriesGrid { grid-template-columns: 1fr; }
+  .industryCard { height: auto; padding: 2rem; }
+}

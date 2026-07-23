@@ -1,0 +1,269 @@
+:root {
+  /* === CORPORATE COLOR PALETTE (Primary) === */
+  --h2-blue: #1565c0;
+  --h2-blue-light: #2196f3;
+  --h2-blue-dark: #0d47a1;
+  --h2-navy: #0a1929;
+  --h2-navy-mid: #0d2137;
+  --h2-white: #fff;
+  --h2-grey: #f5f7fa;
+  --h2-grey-mid: #e2e8f0;
+  --h2-text: #0b1929;
+  --h2-text-muted: #4a6375;
+
+  /* === ACCENT (Use sparingly — CTAs, hover, highlights ONLY) === */
+  --accent-orange: #e65100;
+  --accent-orange-hover: #bf360c;
+
+  /* === ALIASES for backward compatibility === */
+  --primary-dark: var(--h2-navy);
+  --primary-royal: var(--h2-blue-dark);
+  --primary-steel: var(--h2-blue);
+  --primary-light: #e3f2fd;
+  --neutral-white: var(--h2-white);
+  --neutral-light-gray: var(--h2-grey);
+  --neutral-mid-gray: var(--h2-grey-mid);
+  --neutral-dark-gray: var(--h2-text);
+  --neutral-text-muted: var(--h2-text-muted);
+
+  --font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --transition-smooth: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ─────────────── Base resets ─────────────── */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: var(--font-family);
+  background-color: var(--h2-white);
+  color: var(--h2-text);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─────────────── Scrollbar ─────────────── */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--h2-grey); }
+::-webkit-scrollbar-thumb { background: var(--h2-blue); border-radius: 0; }
+::-webkit-scrollbar-thumb:hover { background: var(--h2-blue-dark); }
+
+/* ─────────────── Typography ─────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 800;
+  color: var(--h2-text);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+
+p {
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--h2-text-muted);
+}
+
+button, .btn {
+  font-family: var(--font-family);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+a { text-decoration: none; }
+
+/* ─────────────── Full-width container ─────────────── */
+.container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 6rem;
+}
+
+@media (max-width: 1280px) { .container { padding: 0 3rem; } }
+@media (max-width: 1024px) { .container { padding: 0 2rem; } }
+@media (max-width: 640px)  { .container { padding: 0 1.25rem; } }
+
+/* ─────────────── Section utilities ─────────────── */
+section {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.section-padding { padding: 6rem 0; }
+
+@media (max-width: 768px) { .section-padding { padding: 4rem 0; } }
+
+/* ─────────────── CAD Grid Background ─────────────── */
+.cad-grid { position: relative; }
+.cad-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--h2-grey-mid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--h2-grey-mid) 1px, transparent 1px);
+  background-size: 32px 32px;
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ─────────────── Blueprint Dark Background ─────────────── */
+.blueprint-bg {
+  background-color: var(--h2-navy);
+  position: relative;
+}
+.blueprint-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(33, 150, 243, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(33, 150, 243, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ─────────────── Accent line ─────────────── */
+.orange-line {
+  height: 3px;
+  width: 48px;
+  background-color: var(--accent-orange);
+  margin-bottom: 1.25rem;
+}
+
+/* ─────────────── Buttons ─────────────── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: var(--accent-orange);
+  color: #fff;
+  padding: 0.9rem 2rem;
+  border: 2px solid var(--accent-orange);
+  border-radius: 0;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+.btn-primary:hover {
+  background-color: var(--accent-orange-hover);
+  border-color: var(--accent-orange-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(230, 81, 0, 0.25);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: transparent;
+  color: #fff;
+  padding: 0.9rem 2rem;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-radius: 0;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+.btn-secondary:hover {
+  border-color: var(--accent-orange);
+  color: var(--accent-orange);
+  transform: translateY(-2px);
+}
+
+.btn-outline-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: transparent;
+  color: var(--h2-text);
+  padding: 0.9rem 2rem;
+  border: 2px solid var(--h2-text);
+  border-radius: 0;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+.btn-outline-dark:hover {
+  border-color: var(--accent-orange);
+  color: var(--accent-orange);
+}
+
+/* ─────────────── Pulse animation ─────────────── */
+@keyframes pulse {
+  0%   { transform: scale(0.9); opacity: 0.8; }
+  50%  { transform: scale(1.4); opacity: 0.3; }
+  100% { transform: scale(0.9); opacity: 0.8; }
+}
+
+.pulse-dot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--accent-orange);
+  border-radius: 50%;
+  position: relative;
+}
+.pulse-dot::after {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border: 2px solid var(--accent-orange);
+  border-radius: 50%;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+/* ─────────────── Diagonal crop helpers ─────────────── */
+.diagonal-crop         { clip-path: polygon(0 0, 100% 0, 100% 88%, 0% 100%); }
+.diagonal-crop-reverse { clip-path: polygon(0 12%, 100% 0, 100% 100%, 0% 100%); }
+
+/* ─────────────── Technical label badge ─────────────── */
+.tech-label {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background-color: var(--h2-blue-dark);
+  color: #fff;
+  border-left: 2px solid var(--accent-orange);
+}
+
+/* ─────────────── Engineering tag strip ─────────────── */
+.eng-tag-strip {
+  display: flex;
+  gap: 0;
+  border-top: 1px solid var(--h2-grey-mid);
+  padding-top: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+.eng-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--h2-blue);
+  border-right: 1px solid var(--h2-grey-mid);
+  padding: 0.2rem 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.eng-tag:last-child { border-right: none; }
+.eng-tag:first-child { padding-left: 0; }
