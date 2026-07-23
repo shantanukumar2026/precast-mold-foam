@@ -8,7 +8,7 @@ const EXPLORER_PRODUCTS = [
   {
     category: "Drainage Systems",
     name: "Standard Box Culvert Mold",
-    image: "/images/Precast (5).jpeg",
+    image: "/images/Precast (2).jpeg",
     specs: {
       "Inner Dimensions": "3000mm x 3000mm x 1500mm L",
       "Core Retraction": "Mechanical Shrinkable Corner Core",

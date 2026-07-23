@@ -1,54 +1,48 @@
 .sectionBg {
-  background-color: var(--neutral-white);
-  border-bottom: 1px solid var(--neutral-mid-gray);
+  background-color: var(--h2-white);
+  border-bottom: 1px solid var(--h2-grey-mid);
+  width: 100%;
 }
 
-.doubleColGrid {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 6rem;
-  align-items: flex-start;
-}
-
-/* Left: Download Center */
-.downloadCol {
-  display: flex;
-  flex-direction: column;
+.sectionHeader {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 2rem auto;
 }
 
 .subTitle {
   color: var(--accent-orange);
   font-weight: 700;
-  font-size: 0.8rem;
-  letter-spacing: 2px;
+  font-size: 0.72rem;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
+  display: block;
 }
 
 .mainTitle {
   font-size: 2.25rem;
   font-weight: 800;
-  color: var(--primary-dark);
-  margin-bottom: 1.5rem;
+  color: var(--h2-text);
+  margin-bottom: 0.5rem;
 }
 
 .desc {
-  font-size: 0.95rem;
-  color: var(--neutral-text-muted);
+  font-size: 0.88rem;
+  color: var(--h2-text-muted);
   line-height: 1.6;
-  margin-bottom: 2.5rem;
 }
 
-.downloadList {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+.downloadGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
 }
 
 .downloadCard {
-  background-color: var(--neutral-light-gray);
-  border: 1px solid var(--neutral-mid-gray);
-  padding: 1.5rem;
+  background-color: var(--h2-grey);
+  border: 1px solid var(--h2-grey-mid);
+  padding: 1.5rem 1.75rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
