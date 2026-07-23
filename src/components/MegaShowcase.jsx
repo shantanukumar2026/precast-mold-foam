@@ -191,9 +191,12 @@ export default function MegaShowcase() {
 
                   {/* Actions */}
                   <div className={styles.productActions}>
-                    <button className="btn-primary" style={{ fontSize: "0.75rem", padding: "0.7rem 1.5rem" }}
-                      onClick={() => scrollTo("downloads")}>
-                      Get Spec Sheet <ArrowRight size={13} />
+                    <button
+                      className="btn-primary"
+                      style={{ fontSize: "0.75rem", padding: "0.7rem 1.25rem" }}
+                      onClick={() => setShowCadModal(true)}
+                    >
+                      <DraftingCompass size={13} /> View CAD Blueprint Sheet
                     </button>
                     <button className={styles.quoteLink} onClick={() => scrollTo("downloads")}>
                       Request Quote <ChevronRight size={13} />
@@ -207,6 +210,105 @@ export default function MegaShowcase() {
 
         </div>
       </div>
+
+      {/* ─── CAD Blueprint Lightbox Modal ─── */}
+      {showCadModal && activeProduct && (
+        <div className={styles.cadModalOverlay} onClick={() => setShowCadModal(false)}>
+          <div className={styles.cadModalBox} onClick={(e) => e.stopPropagation()}>
+            <div className={styles.cadModalHeader}>
+              <div>
+                <div className={styles.cadModalSub}>ASTRO CAD Drawing Series · Scale 1:8</div>
+                <h3 className={styles.cadModalTitle}>{activeProduct.name} ({activeProduct.code})</h3>
+              </div>
+              <button className={styles.cadModalClose} onClick={() => setShowCadModal(false)}>✕</button>
+            </div>
+
+            <div className={styles.cadModalBody}>
+              {/* CAD Drawings Grid */}
+              <div className={styles.cadBlueprintGrid}>
+                {/* Panel 1: Top View */}
+                <div className={styles.cadViewCard}>
+                  <div className={styles.cadViewLabel}>TOP VIEW 1:8</div>
+                  <div className={styles.cadDrawingBox}>
+                    <svg viewBox="0 0 200 200" className={styles.cadSvg}>
+                      <rect x="20" y="20" width="160" height="160" fill="none" stroke="#1565c0" strokeWidth="2" />
+                      <rect x="50" y="50" width="100" height="100" fill="none" stroke="#1565c0" strokeWidth="1.5" strokeDasharray="3,3" />
+                      <rect x="85" y="85" width="30" height="30" fill="none" stroke="#e65100" strokeWidth="1.5" />
+                      {/* Dimension lines */}
+                      <line x1="20" y1="10" x2="180" y2="10" stroke="#1565c0" strokeWidth="1" />
+                      <text x="100" y="8" fill="#1565c0" fontSize="10" textAnchor="middle" fontWeight="bold">1'-8"</text>
+                      <line x1="10" y1="20" x2="10" y2="180" stroke="#1565c0" strokeWidth="1" />
+                      <text x="8" y="100" fill="#1565c0" fontSize="10" textAnchor="end" fontWeight="bold">1'-8"</text>
+                    </svg>
+                  </div>
+                </div>
+
+                {/* Panel 2: Isometric View */}
+                <div className={styles.cadViewCard}>
+                  <div className={styles.cadViewLabel}>ISOMETRIC VIEW 1:8</div>
+                  <div className={styles.cadDrawingBox}>
+                    <svg viewBox="0 0 200 200" className={styles.cadSvg}>
+                      <polygon points="100,20 180,60 100,100 20,60" fill="none" stroke="#1565c0" strokeWidth="1.5" />
+                      <polygon points="100,100 180,60 180,140 100,180" fill="none" stroke="#1565c0" strokeWidth="1.5" />
+                      <polygon points="100,100 20,60 20,140 100,180" fill="none" stroke="#1565c0" strokeWidth="1.5" />
+                      <polygon points="100,50 140,70 100,90 60,70" fill="rgba(33,150,243,0.15)" stroke="#1565c0" strokeWidth="1" strokeDasharray="2,2" />
+                    </svg>
+                  </div>
+                </div>
+
+                {/* Panel 3: Section A-A */}
+                <div className={styles.cadViewCard}>
+                  <div className={styles.cadViewLabel}>SECTION A-A SCALE 1:8</div>
+                  <div className={styles.cadDrawingBox}>
+                    <svg viewBox="0 0 200 200" className={styles.cadSvg}>
+                      <rect x="30" y="30" width="140" height="140" fill="rgba(13,33,55,0.04)" stroke="#1565c0" strokeWidth="2" />
+                      <rect x="60" y="30" width="80" height="110" fill="#fff" stroke="#1565c0" strokeWidth="1.5" />
+                      {/* Hatch pattern */}
+                      <line x1="30" y1="50" x2="60" y2="30" stroke="#aaa" strokeWidth="0.75" />
+                      <line x1="30" y1="80" x2="60" y2="60" stroke="#aaa" strokeWidth="0.75" />
+                      <line x1="140" y1="50" x2="170" y2="30" stroke="#aaa" strokeWidth="0.75" />
+                      <line x1="140" y1="80" x2="170" y2="60" stroke="#aaa" strokeWidth="0.75" />
+                      <text x="100" y="185" fill="#1565c0" fontSize="10" textAnchor="middle" fontWeight="bold">WALL 4" · INVERT FALL 1:100</text>
+                    </svg>
+                  </div>
+                </div>
+
+                {/* Panel 4: 3D Render Breakdown */}
+                <div className={styles.cadViewCard}>
+                  <div className={styles.cadViewLabel}>3D EXPLODED RENDER</div>
+                  <div className={styles.cadDrawingBox} style={{ background: "#f5f7fa" }}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={activeProduct.image} alt={activeProduct.name} className={styles.cadRenderImg} />
+                  </div>
+                </div>
+              </div>
+
+              {/* PDF Engineering Details Table */}
+              <div className={styles.cadSpecsTableBox}>
+                <div className={styles.cadSpecsTitle}>Manufacturing Specifications (From ASTRO PDF Series)</div>
+                <div className={styles.cadSpecsGrid}>
+                  {Object.entries({ ...activeProduct.dimensions, ...activeProduct.specs }).map(([lbl, val]) => (
+                    <div key={lbl} className={styles.cadSpecItem}>
+                      <span className={styles.cadSpecLbl}>{lbl}:</span>
+                      <span className={styles.cadSpecVal}>{val}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.cadModalFooter}>
+              <button className={styles.cadDownloadBtn} onClick={() => { scrollTo("downloads"); setShowCadModal(false); }}>
+                Download DWG / PDF Specs
+              </button>
+              <button className="btn-primary" style={{ padding: "0.65rem 1.25rem", fontSize: "0.75rem" }}
+                onClick={() => { scrollTo("downloads"); setShowCadModal(false); }}>
+                Request Custom Quotation <ArrowRight size={13} />
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

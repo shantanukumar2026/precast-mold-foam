@@ -424,3 +424,199 @@
   .rightCol { grid-column: 1; }
   .specTabs { grid-template-columns: 1fr; }
 }
+
+/* ─── CAD Lightbox Modal ─── */
+.cadModalOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(10, 25, 41, 0.85);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.cadModalBox {
+  background-color: var(--h2-white);
+  width: 100%;
+  max-width: 1100px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  border-top: 4px solid var(--h2-blue);
+  overflow: hidden;
+}
+
+.cadModalHeader {
+  background-color: var(--h2-navy);
+  color: #fff;
+  padding: 1.25rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(33, 150, 243, 0.15);
+}
+
+.cadModalSub {
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: var(--accent-orange);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.cadModalTitle {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #fff;
+  margin-top: 0.1rem;
+}
+
+.cadModalClose {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: var(--transition-smooth);
+}
+.cadModalClose:hover { color: var(--accent-orange); }
+
+.cadModalBody {
+  padding: 2rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.cadBlueprintGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.cadViewCard {
+  border: 1px solid var(--h2-grey-mid);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.cadViewLabel {
+  background-color: var(--h2-navy-mid);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 0.5rem 0.75rem;
+  text-align: center;
+  font-family: "Courier New", monospace;
+}
+
+.cadDrawingBox {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  background-color: #fafafa;
+}
+
+.cadSvg {
+  width: 100%;
+  height: 100%;
+}
+
+.cadRenderImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cadSpecsTableBox {
+  background-color: var(--h2-grey);
+  border: 1px solid var(--h2-grey-mid);
+  padding: 1.25rem 1.5rem;
+}
+
+.cadSpecsTitle {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--h2-navy);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--h2-blue);
+}
+
+.cadSpecsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem 1.5rem;
+}
+
+.cadSpecItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.cadSpecLbl {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--h2-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cadSpecVal {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--h2-text);
+}
+
+.cadModalFooter {
+  background-color: var(--h2-grey);
+  border-top: 1px solid var(--h2-grey-mid);
+  padding: 1.25rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cadDownloadBtn {
+  background-color: var(--h2-navy);
+  color: #fff;
+  border: none;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+.cadDownloadBtn:hover { background-color: var(--h2-blue); }
+
+@media (max-width: 1024px) {
+  .cadBlueprintGrid { grid-template-columns: repeat(2, 1fr); }
+  .cadSpecsGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .cadBlueprintGrid { grid-template-columns: 1fr; }
+  .cadSpecsGrid { grid-template-columns: 1fr; }
+  .cadModalFooter { flex-direction: column; gap: 1rem; }
+}
