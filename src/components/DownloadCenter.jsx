@@ -67,8 +67,8 @@ export default function DownloadCenter() {
           {/* Right Column: Custom Mold Form */}
           <div className={styles.quoteFormBox} id="contact">
             <div className={styles.formHeader}>
-              <h2 className={styles.formTitle}>Need a Custom Mold?</h2>
-              <p className={styles.formSubtitle}>Let&apos;s Build It Together. Send us your project drawing files.</p>
+              <h2 className={styles.formTitle}>Request Engineering Quote</h2>
+              <p className={styles.formSubtitle}>Submit your project requirements and technical drawings for review.</p>
             </div>
 
             {formSubmitted ? (
