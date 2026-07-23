@@ -100,9 +100,9 @@ section[id], div[id] {
   scroll-margin-top: 100px;
 }
 
-.section-padding { padding: 3.25rem 0; }
+.section-padding { padding: 2.25rem 0; }
 
-@media (max-width: 768px) { .section-padding { padding: 2.25rem 0; } }
+@media (max-width: 768px) { .section-padding { padding: 1.75rem 0; } }
 
 /* ─────────────── CAD Grid Background ─────────────── */
 .cad-grid { position: relative; }
