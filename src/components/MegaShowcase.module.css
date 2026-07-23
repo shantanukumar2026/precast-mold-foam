@@ -500,49 +500,41 @@
   gap: 1.75rem;
 }
 
-.cadBlueprintGrid {
+.productModalGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 1.5rem;
+  align-items: flex-start;
 }
 
-.cadViewCard {
+.productModalImgBox {
+  position: relative;
   border: 1px solid var(--h2-grey-mid);
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
+  height: 380px;
+  overflow: hidden;
+  background-color: var(--h2-grey);
 }
 
-.cadViewLabel {
-  background-color: var(--h2-navy-mid);
-  color: rgba(255, 255, 255, 0.85);
+.productModalBadge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: var(--h2-navy);
+  color: var(--accent-orange);
   font-size: 0.6rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  padding: 0.5rem 0.75rem;
-  text-align: center;
-  font-family: "Courier New", monospace;
+  padding: 0.3rem 0.6rem;
+  z-index: 2;
+  border-left: 2px solid var(--accent-orange);
 }
 
-.cadDrawingBox {
-  height: 180px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.75rem;
-  background-color: #fafafa;
-}
-
-.cadSvg {
-  width: 100%;
-  height: 100%;
-}
-
-.cadRenderImg {
+.productModalImg {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .cadSpecsTableBox {

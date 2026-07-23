@@ -3,7 +3,7 @@
  * 
  * Technical specifications derived from engineering drawings and manufacturing standards.
  * All dimensions are nominal; actual units shipped to project-specific tolerances.
- * Reference: ASTRO Drawing Series REV-04, Q345B Steel Grade, AWS D1.1 Welding Standard
+ * Reference: PRECAST Drawing Series REV-04, Q345B Steel Grade, AWS D1.1 Welding Standard
  */
 
 export const PRODUCT_CATALOG = [
@@ -20,7 +20,7 @@ export const PRODUCT_CATALOG = [
     shortName: "Catch Basin",
     badge: "Standard",
     image: "/images/Precast (1).jpeg",
-    description: "Single-piece square catch basin mold for roadside stormwater collection. Based on ASTRO DWG Series REV-04. Includes cover slab mold with lifting hook pocket.",
+    description: "Single-piece square catch basin mold for roadside stormwater collection. Based on PRECAST DWG Series REV-04. Includes cover slab mold with lifting hook pocket.",
     applications: ["Municipal Stormwater", "Roadside Drainage", "Parking Lots", "Highway Verges"],
     dimensions: {
       "Outer Size (O.D.)": "508 × 508 mm (1'-8\" × 1'-8\")",
@@ -44,7 +44,7 @@ export const PRODUCT_CATALOG = [
       hasSectionView: true,
       hasIsometricView: true,
       has3DRender: true,
-      drawingRef: "ASTRO-BCM-300-REV04",
+      drawingRef: "DWG-BCM-300-REV04",
       scale: "1:8",
     },
   },
@@ -82,7 +82,7 @@ export const PRODUCT_CATALOG = [
       hasSectionView: true,
       hasIsometricView: true,
       has3DRender: false,
-      drawingRef: "ASTRO-BCM-1500-REV03",
+      drawingRef: "DWG-BCM-1500-REV03",
       scale: "1:20",
     },
   },
@@ -120,7 +120,7 @@ export const PRODUCT_CATALOG = [
       hasSectionView: true,
       hasIsometricView: false,
       has3DRender: false,
-      drawingRef: "ASTRO-UDM-600-REV02",
+      drawingRef: "DWG-UDM-600-REV02",
       scale: "1:10",
     },
   },
@@ -161,7 +161,7 @@ export const PRODUCT_CATALOG = [
       hasSectionView: true,
       hasIsometricView: false,
       has3DRender: false,
-      drawingRef: "ASTRO-MHM-1200-REV05",
+      drawingRef: "DWG-MHM-1200-REV05",
       scale: "1:15",
     },
   },
@@ -199,7 +199,7 @@ export const PRODUCT_CATALOG = [
       hasSectionView: true,
       hasIsometricView: false,
       has3DRender: false,
-      drawingRef: "ASTRO-CHM-1800-REV02",
+      drawingRef: "DWG-CHM-1800-REV02",
       scale: "1:20",
     },
   },
@@ -240,7 +240,7 @@ export const PRODUCT_CATALOG = [
       hasSectionView: true,
       hasIsometricView: true,
       has3DRender: false,
-      drawingRef: "ASTRO-WPM-3600-REV03",
+      drawingRef: "DWG-WPM-3600-REV03",
       scale: "1:25",
     },
   },
@@ -278,7 +278,7 @@ export const PRODUCT_CATALOG = [
       hasSectionView: true,
       hasIsometricView: false,
       has3DRender: false,
-      drawingRef: "ASTRO-CLM-400-REV02",
+      drawingRef: "DWG-CLM-400-REV02",
       scale: "1:20",
     },
   },
@@ -316,7 +316,7 @@ export const PRODUCT_CATALOG = [
       hasSectionView: true,
       hasIsometricView: true,
       has3DRender: false,
-      drawingRef: "ASTRO-STM-2400-REV01",
+      drawingRef: "DWG-STM-2400-REV01",
       scale: "1:15",
     },
   },
@@ -357,7 +357,7 @@ export const PRODUCT_CATALOG = [
       hasSectionView: true,
       hasIsometricView: false,
       has3DRender: false,
-      drawingRef: "ASTRO-EPS-VF-300-REV02",
+      drawingRef: "DWG-EPS-VF-300-REV02",
       scale: "1:10",
     },
   },
@@ -395,7 +395,7 @@ export const PRODUCT_CATALOG = [
       hasSectionView: true,
       hasIsometricView: false,
       has3DRender: false,
-      drawingRef: "ASTRO-EPS-BK-150-REV01",
+      drawingRef: "DWG-EPS-BK-150-REV01",
       scale: "1:5",
     },
   },
