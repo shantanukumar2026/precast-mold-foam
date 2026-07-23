@@ -136,12 +136,16 @@
 /* ── Nav ── */
 .navMenu {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   gap: 0;
   list-style: none;
 }
 
-.navItem { position: relative; }
+.navItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
 
 .navLink {
   font-weight: 600;
@@ -178,12 +182,25 @@
   transform: translateY(8px);
   transition: var(--transition-smooth);
   z-index: 10;
+  pointer-events: none;
+}
+
+.dropdown::before,
+.megaMenu::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: 0;
+  right: 0;
+  height: 25px;
+  background: transparent;
 }
 
 .navItem:hover .dropdown {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+  pointer-events: all;
 }
 
 .dropdownItem button {
@@ -223,17 +240,17 @@
   opacity: 0;
   visibility: hidden;
   transform: translateY(12px);
-  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0s linear 0.25s;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
   z-index: 100;
   pointer-events: none;
 }
 
-.megaMenuOpen {
+.megaMenuOpen,
+.megaMenuItem:hover .megaMenu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
   pointer-events: all;
-  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0s linear 0s;
 }
 
 /* Left panel: category lists */
