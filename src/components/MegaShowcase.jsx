@@ -37,6 +37,7 @@ const DISPLAY_CATS = [
 export default function MegaShowcase() {
   const [activeCatIdx, setActiveCatIdx] = useState(0);
   const [activeProductIdx, setActiveProductIdx] = useState(0);
+  const [showCadModal, setShowCadModal] = useState(false);
 
   const activeCategory = DISPLAY_CATS[activeCatIdx];
   const activeProduct = activeCategory.products[activeProductIdx] || activeCategory.products[0];
