@@ -2,7 +2,6 @@
 
 import React from "react";
 import { Mail, Phone, MapPin, Clock, Linkedin, Facebook, Twitter, Youtube } from "lucide-react";
-import { USFlag, CAFlag, EUFlag } from "./FlagIcons";
 import styles from "./Footer.module.css";
 
 const scrollTo = (id) => {
@@ -115,9 +114,9 @@ export default function Footer() {
             <div className={styles.territories}>
               <div className={styles.territoryTitle}>Service Territories</div>
               <div className={styles.territoryFlags}>
-                <span><USFlag size={14} /> USA</span>
-                <span><CAFlag size={14} /> Canada</span>
-                <span><EUFlag size={14} /> Europe</span>
+                <span>USA</span>
+                <span>Canada</span>
+                <span>Europe</span>
               </div>
             </div>
           </div>
