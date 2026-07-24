@@ -104,10 +104,7 @@ export default function Header() {
       {/* ── Main Header ── */}
       <header className={`${styles.mainHeader} ${isSticky ? styles.stickyMainHeader : ""}`}>
         <button className={styles.logoArea} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-          <div className={styles.logoTitle}>
-            PRE<span>CAST</span>
-          </div>
-          <div className={styles.logoSubtitle}>Steel Molds &amp; EPS Foam Solutions</div>
+          <img src="/images/Precast-logo-tr.png" alt="Precast Industries Logo" className={styles.logoImg} />
         </button>
 
         {/* Desktop Nav */}

@@ -45,8 +45,7 @@ export default function Footer() {
           {/* Brand Column */}
           <div className={styles.descCol}>
             <div className={styles.logoArea}>
-              <div className={styles.logoTitle}>PRE<span>CAST</span></div>
-              <div className={styles.logoSubtitle}>Steel Molds &amp; EPS Foam Solutions</div>
+              <img src="/images/Precast-logo-tr.png" alt="Precast Industries Logo" className={styles.logoImg} />
             </div>
             <p className={styles.companyDesc}>
               Industrial-grade manufacturer of structural steel molds and engineered EPS foam solutions for precast concrete producers across USA, Canada, and Europe.

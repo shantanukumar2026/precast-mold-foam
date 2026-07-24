@@ -37,24 +37,14 @@
   gap: 1.25rem;
 }
 
-.logoArea { display: flex; flex-direction: column; }
+.logoArea { display: flex; align-items: center; }
 
-.logoTitle {
-  font-size: 1.7rem;
-  font-weight: 800;
-  letter-spacing: 4px;
-  color: #fff;
-}
-
-.logoTitle span { color: var(--h2-blue-light); }
-
-.logoSubtitle {
-  font-size: 0.6rem;
-  font-weight: 700;
-  color: rgba(255,255,255,0.45);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-top: 0.1rem;
+.logoImg {
+  height: 62px;
+  width: auto;
+  max-width: 340px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 
 .companyDesc {
