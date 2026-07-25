@@ -57,7 +57,7 @@
   background-color: var(--h2-blue-dark);
   border-top-color: var(--accent-orange);
   transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 12px 28px rgba(0, 4, 173, 0.2);
 }
 
 .iconWrapper {

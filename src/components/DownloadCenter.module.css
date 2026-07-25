@@ -53,7 +53,7 @@
 .downloadCard:hover {
   background-color: var(--neutral-white);
   border-color: var(--primary-royal);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 10px 20px rgba(0, 4, 173, 0.05);
 }
 
 .docInfo {
@@ -100,7 +100,7 @@
   border: 1px solid var(--neutral-mid-gray);
   border-top: 4px solid var(--accent-orange);
   padding: 3rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 10px 30px rgba(0, 4, 173, 0.05);
 }
 
 .formHeader {

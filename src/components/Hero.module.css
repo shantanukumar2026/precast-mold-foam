@@ -105,7 +105,7 @@
 
 .mainTitle span { 
   color: var(--brand-blue); 
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 12px rgba(0, 4, 173, 0.6);
 }
 
 .description {
