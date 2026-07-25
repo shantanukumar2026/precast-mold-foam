@@ -4,10 +4,22 @@ import React, { useState, useEffect } from "react";
 import { Award, Building2, Users, ShieldCheck, Truck, Cpu, ArrowRight, Play, PhoneCall, Download, DraftingCompass } from "lucide-react";
 import styles from "./Hero.module.css";
 
-const HERO_IMAGES = [
-  "/images/Precast (22).jpeg",
-  "/images/Precast (41).jpeg",
-  "/images/Precast (48).jpeg",
+const HERO_VIDEOS = [
+  {
+    video: "/images/Mold-images/Mega Mold Trench Red.mp4",
+    poster: "/images/extracted_photos/Mega_Mold_Trench_Red_frame1.jpg",
+    title: "Heavy-Duty Trench & Drainage Molds"
+  },
+  {
+    video: "/images/Mold-images/Mega Mold Ring mold.mp4",
+    poster: "/images/extracted_photos/Mega_Mold_Ring_mold_frame1.jpg",
+    title: "Precision Circular Manhole Molds"
+  },
+  {
+    video: "/images/Mold-images/12-10- 30-48 mold rectangle.5279.mp4",
+    poster: "/images/extracted_photos/12_10__30_48_mold_rectangle_5279_frame1.jpg",
+    title: "Rectangular Utility Chamber Molds"
+  },
 ];
 
 const scrollTo = (id) => {
@@ -20,21 +32,36 @@ export default function Hero() {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % HERO_IMAGES.length);
-    }, 6000);
+      setCurrentSlide((prev) => (prev + 1) % HERO_VIDEOS.length);
+    }, 7000);
     return () => clearInterval(timer);
   }, []);
 
   return (
     <>
       <section className={styles.heroContainer} id="hero">
-        {/* Background Slideshow */}
-        {HERO_IMAGES.map((img, index) => (
+        {/* Background Video & Photo Slideshow */}
+        {HERO_VIDEOS.map((item, index) => (
           <div
             key={index}
             className={styles.heroBg}
-            style={{ backgroundImage: `url('${img}')`, opacity: currentSlide === index ? 1 : 0 }}
-          />
+            style={{ opacity: currentSlide === index ? 1 : 0 }}
+          >
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              poster={item.poster}
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover"
+              }}
+            >
+              <source src={item.video} type="video/mp4" />
+            </video>
+          </div>
         ))}
 
         {/* Gradient Overlay */}
@@ -46,7 +73,7 @@ export default function Hero() {
         {/* Corner technical tag */}
         <div className={styles.heroCornerTag}>
           <span>DWG-REF: MOLD-2026-USA</span>
-          <span>REV: 04 | SHEET: 1 OF 1</span>
+          <span>REV: 04 | 3D ANIMATION ACTIVE</span>
         </div>
 
         {/* Hero Content */}
@@ -108,7 +135,7 @@ export default function Hero() {
 
         {/* Slideshow Dots */}
         <div className={styles.slideshowDots}>
-          {HERO_IMAGES.map((_, index) => (
+          {HERO_VIDEOS.map((_, index) => (
             <div
               key={index}
               className={`${styles.dot} ${currentSlide === index ? styles.activeDot : ""}`}

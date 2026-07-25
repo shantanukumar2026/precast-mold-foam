@@ -49,9 +49,9 @@ const MEGA_PRODUCTS = {
 };
 
 const FEATURED_PRODUCTS = [
-  { img: "/images/Precast (1).jpeg", name: "Catch Basin Mold", code: "BCM-300", tag: "Drainage" },
-  { img: "/images/Precast (10).jpeg", name: "Manhole Mold Ø1200", code: "MHM-1200", tag: "Utility" },
-  { img: "/images/Precast (14).jpeg", name: "EPS Void Former", code: "EPS-VF-300", tag: "Foam" },
+  { img: "/images/extracted_photos/12_10__30_48_mold_rectangle_5279_frame1.jpg", name: "Catch Basin Mold", code: "BCM-300", tag: "Drainage" },
+  { img: "/images/extracted_photos/Mega_Mold_Ring_mold_frame1.jpg", name: "Manhole Mold Ø1200", code: "MHM-1200", tag: "Utility" },
+  { img: "/images/extracted_photos/untitled_52_frame1.jpg", name: "EPS Void Former", code: "EPS-VF-300", tag: "Foam" },
 ];
 
 export default function Header() {

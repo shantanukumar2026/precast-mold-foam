@@ -8,7 +8,8 @@ const EXPLORER_PRODUCTS = [
   {
     category: "Drainage Systems",
     name: "Standard Box Culvert Mold",
-    image: "/images/Precast (2).jpeg",
+    image: "/images/extracted_photos/final_30_48_mold__model_animation_284_frame1.jpg",
+    video: "/images/Mold-images/final 30 48 mold  model animation.284.mp4",
     specs: {
       "Inner Dimensions": "3000mm x 3000mm x 1500mm L",
       "Core Retraction": "Mechanical Shrinkable Corner Core",
@@ -20,7 +21,8 @@ const EXPLORER_PRODUCTS = [
   {
     category: "Utility Systems",
     name: "Precast Manhole Mold Assembly",
-    image: "/images/Precast (10).jpeg",
+    image: "/images/extracted_photos/Mega_Mold_Ring_mold_frame1.jpg",
+    video: "/images/Mold-images/Mega Mold Ring mold.mp4",
     specs: {
       "Internal Diameter": "Ø1200mm (Modular Ring Sections)",
       "Mold Operations": "Hinged outer shell with locking keys",
@@ -32,7 +34,8 @@ const EXPLORER_PRODUCTS = [
   {
     category: "EPS Void Formers",
     name: "EPS Bridge Void Former Assembly",
-    image: "/images/Precast (15).jpeg",
+    image: "/images/extracted_photos/untitled_52_frame1.jpg",
+    video: "/images/Mold-images/untitled.52.mp4",
     specs: {
       "Density Specification": "25kg/m³ - 30kg/m³ High density foam",
       "Attachment Design": "Pre-routed anchor slots for hold-down strap",
@@ -44,7 +47,8 @@ const EXPLORER_PRODUCTS = [
   {
     category: "Structural Forms",
     name: "Precast Boundary Wall Battery Mold",
-    image: "/images/Precast (18).jpeg",
+    image: "/images/extracted_photos/12_10__30_48_mold_rectangle_5272_frame1.jpg",
+    video: "/images/Mold-images/12-10- 30-48 mold rectangle.5272.mp4",
     specs: {
       "Mold Capacity": "4 to 8 cavities simultaneously",
       "Side Panel Action": "Hydraulic cylinder sliding base",
@@ -94,14 +98,18 @@ export default function ProductExplorer() {
         <div className={styles.sliderTrack} ref={scrollRef}>
           {EXPLORER_PRODUCTS.map((prod, idx) => (
             <div key={idx} className={styles.productItem}>
-              {/* Left Column: Image */}
+              {/* Left Column: Video / Image */}
               <div className={styles.imgCol}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={prod.image}
-                  alt={prod.name}
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  poster={prod.image}
                   className={styles.explorerImg}
-                />
+                >
+                  <source src={prod.video} type="video/mp4" />
+                </video>
               </div>
 
               {/* Right Column: Specs */}

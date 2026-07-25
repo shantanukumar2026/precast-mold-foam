@@ -1,48 +1,52 @@
 "use client";
 
 import React, { useState } from "react";
-import { X, ZoomIn, Eye } from "lucide-react";
+import { X, ZoomIn, Eye, Play } from "lucide-react";
 import styles from "./FacilityGallery.module.css";
 
 const GALLERY_DATA = [
   {
-    image: "/images/Precast (19).jpeg",
-    category: "CNC Machining",
-    title: "10kW Fiber Laser Cutting Bed",
-    description: "Highly automated high-power sheet processing. Cuts structural shapes directly from CAD DXF vectors, securing a perfect fit for multi-segment locking plates.",
+    image: "/images/extracted_photos/movement_section_view_73_frame1.jpg",
+    video: "/images/Mold-images/movement section view.73.mp4",
+    category: "Mechanism View",
+    title: "Dynamic Cross-Section Core Withdrawal",
+    description: "Highly automated mechanical inner core collapsing system. Works synchronously to allow rapid demolding without damaging concrete wall faces.",
     specs: {
-      "Laser Power": "10,000 Watts Fiber",
+      "Stripping Action": "Internal Collapsible Core",
       "Linear Tolerance": "+/- 0.05 mm",
-      "Cutting Limits": "Up to 25mm Carbon Steel"
+      "Operation Speed": "< 30 Seconds Withdrawal"
     }
   },
   {
-    image: "/images/Precast (22).jpeg",
-    category: "Welding Systems",
-    title: "Heavy Structural Welding Bay",
-    description: "Certified welding station utilizing dual-pass MIG and submerged arc welding processes. Every seam undergoes non-destructive ultrasonic testing.",
+    image: "/images/extracted_photos/trnch_mold_animation_7_frame1.jpg",
+    video: "/images/Mold-images/trnch mold animation.7.mp4",
+    category: "Trench System",
+    title: "Automated Trench Mold Assembly",
+    description: "Modular trench mold system with swing-open side panels and heavy structural locking pins designed for high-cycle daily casting.",
     specs: {
       "Process Standard": "AWS D1.1 Structural Steel",
-      "Equipment Setup": "Lincoln Electric MIG stations",
+      "Locking Mechanism": "Heavy Mechanical Wedge Clamps",
       "Seam Penetration": "100% Full-Penetration welds"
     }
   },
   {
-    image: "/images/Precast (41).jpeg",
-    category: "Assembly Deck",
-    title: "Main Mold Assembly & Alignment Platform",
-    description: "Precision assembly platform where side panels, hinges, locking wedges, and hydraulic cylinders are integrated and validated under horizontal level gauges.",
+    image: "/images/extracted_photos/12_10__30_48_mold_rectangle_5277_frame1.jpg",
+    video: "/images/Mold-images/12-10- 30-48 mold rectangle.5277.mp4",
+    category: "Chamber Assembly",
+    title: "Utility Chamber Structural Framework",
+    description: "Precision assembly platform where side panels, hinges, locking wedges, and core mechanisms are validated for structural alignment.",
     specs: {
-      "Platform Area": "12,000 Sq. Ft.",
-      "Overhead Cranes": "2x 20-Ton Demag Cranes",
+      "Steel Grade": "Q345B Carbon Steel",
+      "Framework": "Heavy Ribbed Stiffeners",
       "Levelness Tolerance": "0.5mm per 10 Meters"
     }
   },
   {
-    image: "/images/Precast (48).jpeg",
-    category: "Quality Assurance",
-    title: "On-Site casting trial deck",
-    description: "Every mold undergoes mechanical load testing and trial casting under hydrostatic concrete pressure to assure seal compression and quick release function.",
+    image: "/images/extracted_photos/ring_mold_animation_5276_frame1.jpg",
+    video: "/images/Mold-images/ring mold animation.5276.mp4",
+    category: "Manhole Ring",
+    title: "Circular Ring Mold Expansion & Lock",
+    description: "Multi-segment circular ring mold with clamshell outer jackets and collapsible inner mandrel undergoing mechanical movement testing.",
     specs: {
       "Casting Pressure": "Tested up to 200 kN/m²",
       "Vibrator Rails": "Electric High-Freq channels",
@@ -50,21 +54,23 @@ const GALLERY_DATA = [
     }
   },
   {
-    image: "/images/Precast (15).jpeg",
-    category: "EPS Hotwire",
-    title: "4-Axis CNC EPS Hotwire Cutters",
-    description: "High-precision computer controlled thermal cutting systems. Translates detailed CAD blockout designs into rigid EPS foam void formers.",
+    image: "/images/extracted_photos/untitled_28_frame1.jpg",
+    video: "/images/Mold-images/untitled.28.mp4",
+    category: "Precision Core",
+    title: "3D Mold Kinematic Motion Test",
+    description: "Full CAD computer simulation and real-world kinematic verification of mold core collapse and expansion clearance.",
     specs: {
-      "Cutting Wire": "Titanium Alloy 0.25mm wire",
+      "Simulation Tool": "3D CAD Kinematic Motion",
       "Forming Envelope": "4000mm x 1200mm x 1200mm",
-      "CNC Accuracy": "+/- 1.0mm per block"
+      "CNC Accuracy": "+/- 0.2mm per block"
     }
   },
   {
-    image: "/images/Precast (54).jpeg",
-    category: "Dispatch Yard",
-    title: "Finished Storage & Rustproofing Yard",
-    description: "Final dispatch yard where finished molds receive double coatings of rust preventative primers and marine grade protective enamels prior to flatbed dispatch.",
+    image: "/images/extracted_photos/2_feet_mold_55_frame1.jpg",
+    video: "/images/Mold-images/2 feet mold.55.mp4",
+    category: "Modular Systems",
+    title: "2-Feet Modular Box Mold Animation",
+    description: "Compact modular steel mold design configured for quick assembly, rapid turnover, and easy highway transport.",
     specs: {
       "Coating System": "Zinc-Rich Epoxy Primer & Enamel",
       "Dispatch Capacity": "8-10 major mold sets daily",
@@ -83,18 +89,17 @@ export default function FacilityGallery() {
         {/* Section Header */}
         <div className={styles.sectionHeader}>
           <div className={styles.titleArea}>
-            <span className={styles.sectionSub}>Facility Operations</span>
-            <h2 className={styles.sectionTitle}>Inside Our Manufacturing Plant</h2>
+            <span className={styles.sectionSub}>Facility Operations &amp; Mechanics</span>
+            <h2 className={styles.sectionTitle}>3D Mold Motion &amp; Engineering Gallery</h2>
           </div>
           <p className={styles.headerText}>
-            Operating a world-class fabrication yard equipped with modern CNC cutting, certified welding, and heavy casting test beds.
+            Explore interactive 3D motion models and real mechanism animations of our precast steel molds and core withdrawal systems.
           </p>
         </div>
 
         {/* Gallery Grid */}
         <div className={styles.galleryGrid}>
           {GALLERY_DATA.map((item, idx) => {
-            // Apply diagonal crop to first and last items for a premium magazine feel
             const isCrop = idx === 0 || idx === GALLERY_DATA.length - 1;
             return (
               <div 
@@ -102,14 +107,18 @@ export default function FacilityGallery() {
                 className={`${styles.galleryItem} ${isCrop ? styles.cropDiagonal : ""}`}
                 onClick={() => setActiveItem(item)}
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={item.image}
-                  alt={item.title}
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  poster={item.image}
                   className={styles.galleryImg}
-                />
+                >
+                  <source src={item.video} type="video/mp4" />
+                </video>
                 <div className={styles.overlay}>
-                  <Eye size={20} style={{ color: "var(--neutral-white)", marginBottom: "0.5rem" }} />
+                  <Play size={22} style={{ color: "var(--neutral-white)", marginBottom: "0.5rem" }} fill="currentColor" />
                   <span className={styles.imgCat}>{item.category}</span>
                   <h3 className={styles.imgTitle}>{item.title}</h3>
                 </div>
@@ -128,14 +137,18 @@ export default function FacilityGallery() {
                 <X size={18} /> Close
               </button>
 
-              {/* Left Column: Image */}
+              {/* Left Column: Video */}
               <div className={styles.lightboxImgCol}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img 
-                  src={activeItem.image} 
-                  alt={activeItem.title} 
+                <video 
+                  autoPlay
+                  loop
+                  muted
+                  controls
+                  poster={activeItem.image} 
                   className={styles.lightboxImg}
-                />
+                >
+                  <source src={activeItem.video} type="video/mp4" />
+                </video>
               </div>
 
               {/* Right Column: Information */}

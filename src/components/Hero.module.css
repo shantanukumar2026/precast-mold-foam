@@ -103,7 +103,10 @@
   text-transform: uppercase;
 }
 
-.mainTitle span { color: var(--h2-blue-light); }
+.mainTitle span { 
+  color: var(--brand-blue); 
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
 
 .description {
   font-size: 1.05rem;

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { ChevronRight, ArrowRight, DraftingCompass, FileText, CheckCircle, Layers } from "lucide-react";
+import { ChevronRight, ArrowRight, DraftingCompass, FileText, CheckCircle, Layers, Play } from "lucide-react";
 import { PRODUCT_CATALOG, CATEGORY_GROUPS } from "@/data/ProductData";
 import styles from "./MegaShowcase.module.css";
 
@@ -103,14 +103,28 @@ export default function MegaShowcase() {
           <div className={styles.rightCol}>
             {activeProduct && (
               <>
-                {/* Image Banner */}
+                {/* Image / Video Banner */}
                 <div className={styles.productImageBanner}>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={activeProduct.image}
-                    alt={activeProduct.name}
-                    className={styles.productBannerImg}
-                  />
+                  {activeProduct.video ? (
+                    <video
+                      key={activeProduct.id}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      poster={activeProduct.image}
+                      className={styles.productBannerImg}
+                    >
+                      <source src={activeProduct.video} type="video/mp4" />
+                    </video>
+                  ) : (
+                    /* eslint-disable-next-line @next/next/no-img-element */
+                    <img
+                      src={activeProduct.image}
+                      alt={activeProduct.name}
+                      className={styles.productBannerImg}
+                    />
+                  )}
                   <div className={styles.productBannerOverlay}>
                     <div className={styles.productBannerCode}>{activeProduct.code}</div>
                     {activeProduct.badge && (
@@ -227,11 +241,24 @@ export default function MegaShowcase() {
             <div className={styles.cadModalBody}>
               {/* Product Showcase & Spec Grid */}
               <div className={styles.productModalGrid}>
-                {/* Left: Final Product Photo */}
+                {/* Left: Final Product Photo / Video */}
                 <div className={styles.productModalImgBox}>
-                  <div className={styles.productModalBadge}>Final Manufactured Product</div>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={activeProduct.image} alt={activeProduct.name} className={styles.productModalImg} />
+                  <div className={styles.productModalBadge}>3D Mold Animation &amp; Mechanics</div>
+                  {activeProduct.video ? (
+                    <video
+                      autoPlay
+                      loop
+                      muted
+                      controls
+                      poster={activeProduct.image}
+                      className={styles.productModalImg}
+                    >
+                      <source src={activeProduct.video} type="video/mp4" />
+                    </video>
+                  ) : (
+                    /* eslint-disable-next-line @next/next/no-img-element */
+                    <img src={activeProduct.image} alt={activeProduct.name} className={styles.productModalImg} />
+                  )}
                 </div>
 
                 {/* Right: Detailed Specification Table */}

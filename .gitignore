@@ -23,6 +23,10 @@
 # misc
 .DS_Store
 *.pem
+*.rar
+
+# ignore duplicate video backup folder in git to keep repo lightweight
+public/images_backup/Mold-images/
 
 # debug
 npm-debug.log*

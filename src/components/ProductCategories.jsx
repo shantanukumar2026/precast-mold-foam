@@ -44,8 +44,16 @@ export default function ProductCategories() {
               </button>
             </div>
             <div className={styles.spanTwoRight}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/Precast (3).jpeg" alt="Heavy-Duty Steel Mold" className={styles.spanTwoImg} />
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                poster="/images/extracted_photos/Mega_Mold_Trench_Red_frame1.jpg"
+                className={styles.spanTwoImg}
+              >
+                <source src="/images/Mold-images/Mega Mold Trench Red.mp4" type="video/mp4" />
+              </video>
             </div>
           </div>
 

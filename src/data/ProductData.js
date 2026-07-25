@@ -19,7 +19,8 @@ export const PRODUCT_CATALOG = [
     name: "Square Catch Basin Mold",
     shortName: "Catch Basin",
     badge: "Standard",
-    image: "/images/Precast (1).jpeg",
+    image: "/images/extracted_photos/12_10__30_48_mold_rectangle_5279_frame1.jpg",
+    video: "/images/Mold-images/12-10- 30-48 mold rectangle.5279.mp4",
     description: "Single-piece square catch basin mold for roadside stormwater collection. Based on PRECAST DWG Series REV-04. Includes cover slab mold with lifting hook pocket.",
     applications: ["Municipal Stormwater", "Roadside Drainage", "Parking Lots", "Highway Verges"],
     dimensions: {
@@ -57,7 +58,8 @@ export const PRODUCT_CATALOG = [
     name: "Box Culvert Mold — 1500 Series",
     shortName: "Box Culvert",
     badge: "Best Seller",
-    image: "/images/Precast (3).jpeg",
+    image: "/images/extracted_photos/final_30_48_mold__model_animation_284_frame1.jpg",
+    video: "/images/Mold-images/final 30 48 mold  model animation.284.mp4",
     description: "Heavy-duty rectangular box culvert mold for stormwater tunnels and pedestrian underpasses. Mechanical shrinkable corner core for fast stripping.",
     applications: ["Stormwater Tunnels", "Pedestrian Underpasses", "Highway Crossings", "Irrigation Channels"],
     dimensions: {
@@ -95,7 +97,8 @@ export const PRODUCT_CATALOG = [
     name: "U-Drain Channel Mold — 600mm",
     shortName: "U-Drain",
     badge: "Infrastructure",
-    image: "/images/Precast (4).jpeg",
+    image: "/images/extracted_photos/Mega_Mold_Trench_Red_frame1.jpg",
+    video: "/images/Mold-images/Mega Mold Trench Red.mp4",
     description: "Open-top U-shaped drain mold for roadside kerb and channel systems. Pneumatic core withdrawal for sub-15-minute strip cycle. Lengths 500–1000mm.",
     applications: ["Roadside Kerb Channels", "Footpath Drainage", "Agricultural Runoff", "Industrial Aprons"],
     dimensions: {
@@ -136,7 +139,8 @@ export const PRODUCT_CATALOG = [
     name: "Circular Manhole Mold — Ø1200",
     shortName: "Manhole Ø1200",
     badge: "Municipal",
-    image: "/images/Precast (10).jpeg",
+    image: "/images/extracted_photos/Mega_Mold_Ring_mold_frame1.jpg",
+    video: "/images/Mold-images/Mega Mold Ring mold.mp4",
     description: "Standard modular circular manhole mold with hinged outer shell and collapsible internal core. Supports both wet-cast and dry-cast methods. Knock-out ports included.",
     applications: ["Sewer Inspection Shafts", "Utility Access Chambers", "Stormwater Sumps", "Telecom Manholes"],
     dimensions: {
@@ -174,7 +178,8 @@ export const PRODUCT_CATALOG = [
     name: "Rectangle Utility Chamber Mold — 1800",
     shortName: "Utility Chamber",
     badge: "Telecom / Power",
-    image: "/images/Precast (11).jpeg",
+    image: "/images/extracted_photos/12_10__30_48_mold_rectangle_5272_frame1.jpg",
+    video: "/images/Mold-images/12-10- 30-48 mold rectangle.5272.mp4",
     description: "Multi-port rectangular chamber mold for telecom, power cable, and water utility access pits. Interchangeable base joint profiles. Shrinkable mechanical internal core.",
     applications: ["Telecom Cable Pits", "Power Cable Chambers", "Water Valve Boxes", "Gas Utility Access"],
     dimensions: {
@@ -215,7 +220,8 @@ export const PRODUCT_CATALOG = [
     name: "Boundary Wall Panel Mold — Battery",
     shortName: "Wall Panel Battery",
     badge: "Commercial",
-    image: "/images/Precast (18).jpeg",
+    image: "/images/extracted_photos/12_10__30_48_mold_rectangle_5272_frame1.jpg",
+    video: "/images/Mold-images/12-10- 30-48 mold rectangle.5272.mp4",
     description: "4-cavity horizontal battery mold for precast boundary wall and fence panels. Hydraulic side-panel sliding mechanism. Heavy H-beam ribs for zero deflection under vibration.",
     applications: ["Boundary & Perimeter Walls", "Highway Noise Barriers", "Architectural Cladding", "Security Fencing"],
     dimensions: {
@@ -253,7 +259,8 @@ export const PRODUCT_CATALOG = [
     name: "Square Column Mold — 400mm",
     shortName: "Column Mold",
     badge: "Structural",
-    image: "/images/Precast (6).jpeg",
+    image: "/images/extracted_photos/2_feet_mold_54_frame1.jpg",
+    video: "/images/Mold-images/2 feet mold.54.mp4",
     description: "Self-sustaining vertical column mold with adjustable cross-section and face plate for architectural A-class finish. Maximum 12m casting length with internal stiffener rings.",
     applications: ["Building Columns", "Bridge Piers", "Carpark Structures", "Industrial Frames"],
     dimensions: {
@@ -291,7 +298,8 @@ export const PRODUCT_CATALOG = [
     name: "Inverted-T Staircase Mold",
     shortName: "Staircase Mold",
     badge: "Custom CNC",
-    image: "/images/Precast (9).jpeg",
+    image: "/images/extracted_photos/movement_section_view_73_frame1.jpg",
+    video: "/images/Mold-images/movement section view.73.mp4",
     description: "Vertical-cast staircase mold with fully adjustable tread and riser dimensions. Side panels swing open on hinge for clean demolding. 8–18 treads per casting.",
     applications: ["Residential Stairs", "Commercial Stairwells", "Industrial Mezzanines", "Public Buildings"],
     dimensions: {
@@ -332,7 +340,8 @@ export const PRODUCT_CATALOG = [
     name: "Rectangular EPS Void Former — 300 Series",
     shortName: "Void Former",
     badge: "High Density",
-    image: "/images/Precast (14).jpeg",
+    image: "/images/extracted_photos/untitled_52_frame1.jpg",
+    video: "/images/Mold-images/untitled.52.mp4",
     description: "CNC hot-wire cut EPS void former for creating hollow cores in precast decks, beams, and walls. Poly-laminated non-stick surface for clean extraction. Class A fire retardant.",
     applications: ["Hollow-Core Slabs", "Bridge Deck Voids", "Rib & Beam Systems", "Lightweight Wall Panels"],
     dimensions: {
@@ -370,7 +379,8 @@ export const PRODUCT_CATALOG = [
     name: "Circular Blockout Former — Ø150mm",
     shortName: "Pipe Blockout",
     badge: "Standard Utility",
-    image: "/images/Precast (16).jpeg",
+    image: "/images/extracted_photos/ring_mold_animation_202_frame1.jpg",
+    video: "/images/Mold-images/ring mold animation.202.mp4",
     description: "CNC hot-wire cut cylindrical EPS blockout for pipe penetrations through precast walls, slabs, and foundation elements. Available Ø50–600mm. Tapered ends for easy removal.",
     applications: ["Pipe Penetration Sleeves", "Anchor Bolt Pockets", "Conduit Pass-throughs", "Drain Holes in Slabs"],
     dimensions: {
