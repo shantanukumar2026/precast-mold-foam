@@ -160,6 +160,13 @@
 .contactItem a:hover { color: var(--accent-orange); }
 
 .contactText { line-height: 1.4; }
+.contactText strong { color: var(--h2-blue-light); font-size: 0.72rem; letter-spacing: 1px; }
+
+.locationDivider {
+  margin-top: 0.65rem;
+  padding-top: 0.65rem;
+  border-top: 1px dashed rgba(33, 150, 243, 0.15);
+}
 
 /* Territories */
 .territories {

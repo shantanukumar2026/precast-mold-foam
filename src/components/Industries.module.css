@@ -1,13 +1,14 @@
 .sectionBg {
-  background-color: var(--h2-navy);
+  background: linear-gradient(135deg, #093780 0%, #114cba 50%, #0066ff 100%);
   color: var(--h2-white);
+  position: relative;
   width: 100%;
 }
 
 .sectionHeader {
   text-align: center;
   max-width: 650px;
-  margin: 0 auto 4rem auto;
+  margin: 0 auto 3rem auto;
 }
 
 .sectionSub {
@@ -28,7 +29,7 @@
 
 .headerText {
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.85);
   margin-top: 0.5rem;
   line-height: 1.6;
 }
@@ -37,55 +38,58 @@
 .industriesGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1px;
-  background-color: rgba(33, 150, 243, 0.08);
+  gap: 1.25rem;
 }
 
 .industryCard {
-  background-color: rgba(10, 25, 41, 0.95);
-  border: none;
-  padding: 2.5rem 2rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 2.25rem 1.75rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 300px;
+  height: 280px;
   transition: var(--transition-smooth);
-  border-top: 3px solid transparent;
+  border-top: 3px solid var(--h2-blue-light);
+  backdrop-filter: blur(8px);
 }
 
 .industryCard:hover {
-  background-color: var(--h2-blue-dark);
+  background: rgba(255, 255, 255, 0.18);
   border-top-color: var(--accent-orange);
+  border-color: rgba(255, 255, 255, 0.35);
   transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(0, 4, 173, 0.2);
+  box-shadow: 0 12px 28px rgba(0, 50, 150, 0.3);
 }
 
 .iconWrapper {
   color: var(--h2-blue-light);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
   transition: var(--transition-smooth);
 }
 
 .industryCard:hover .iconWrapper {
-  color: #fff;
+  color: #ffffff;
+  transform: scale(1.08);
 }
 
 .cardTitle {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 800;
-  color: var(--h2-white);
-  margin-bottom: 0.65rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  transition: var(--transition-smooth);
 }
 
 .cardDesc {
   font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.8);
   line-height: 1.55;
   transition: var(--transition-smooth);
 }
 
 .industryCard:hover .cardDesc {
-  color: rgba(255, 255, 255, 0.9);
+  color: #ffffff;
 }
 
 .industryLink {
@@ -106,7 +110,7 @@
 }
 
 .industryCard:hover .industryLink {
-  color: #fff;
+  color: var(--accent-orange);
 }
 
 @media (max-width: 1200px) {

@@ -47,11 +47,11 @@
 .categoryCard {
   background-color: var(--h2-white);
   border: 1px solid var(--h2-grey-mid);
-  padding: 2.5rem;
+  padding: 2.25rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 460px;
+  height: 440px;
   position: relative;
   overflow: hidden;
   transition: var(--transition-smooth);

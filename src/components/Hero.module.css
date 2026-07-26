@@ -2,7 +2,7 @@
   position: relative;
   height: 92vh;
   min-height: 680px;
-  background-color: var(--h2-navy);
+  background: linear-gradient(135deg, #093379 0%, #0e44a5 50%, #1556c7 100%);
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -24,9 +24,9 @@
   inset: 0;
   background: linear-gradient(
     100deg,
-    rgba(0, 4, 173, 0.94) 0%,
-    rgba(0, 74, 173, 0.78) 55%,
-    rgba(0, 4, 173, 0.35) 100%
+    rgba(9, 45, 110, 0.90) 0%,
+    rgba(17, 72, 179, 0.78) 55%,
+    rgba(0, 119, 255, 0.40) 100%
   );
   z-index: 2;
 }

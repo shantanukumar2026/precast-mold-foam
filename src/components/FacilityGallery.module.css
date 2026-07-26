@@ -46,7 +46,7 @@
 
 .galleryItem {
   position: relative;
-  height: 300px;
+  height: 290px;
   border: 1px solid var(--neutral-mid-gray);
   overflow: hidden;
   cursor: pointer;

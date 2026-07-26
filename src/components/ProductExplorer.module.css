@@ -82,7 +82,7 @@
   border: 1px solid var(--h2-grey-mid);
   display: grid;
   grid-template-columns: 1.15fr 1fr;
-  min-height: 480px;
+  min-height: 460px;
   height: auto;
   transition: var(--transition-smooth);
 }

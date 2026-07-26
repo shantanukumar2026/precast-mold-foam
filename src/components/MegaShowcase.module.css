@@ -37,7 +37,7 @@
 .browserPanel {
   display: grid;
   grid-template-columns: 220px 280px 1fr;
-  min-height: 620px;
+  min-height: 600px;
   border: 1px solid var(--h2-grey-mid);
   background-color: var(--h2-white);
   box-shadow: 0 4px 16px rgba(10, 25, 41, 0.04);

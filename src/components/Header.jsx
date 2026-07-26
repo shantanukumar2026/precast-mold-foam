@@ -81,7 +81,7 @@ export default function Header() {
           </div>
           <div className={styles.utilityItem}>
             <Phone size={12} className={styles.utilIcon} />
-            <a href="tel:+16315550142">+1 (631) 555-0142</a>
+            <a href="tel:+17722970700">(772) 297-0700</a>
           </div>
         </div>
         <div className={styles.utilityRight}>

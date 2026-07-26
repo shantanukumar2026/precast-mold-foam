@@ -99,7 +99,7 @@
   background-color: var(--neutral-light-gray);
   border: 1px solid var(--neutral-mid-gray);
   border-top: 4px solid var(--accent-orange);
-  padding: 3rem;
+  padding: 2.75rem;
   box-shadow: 0 10px 30px rgba(0, 4, 173, 0.05);
 }
 

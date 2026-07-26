@@ -1,31 +1,31 @@
 :root {
-  /* === BRAND COLOR PALETTE === */
-  --brand-dark-navy: #0004ad;
-  --brand-navy: #004aad;
-  --brand-blue: #0085f4;
-  --brand-cyan: #00bbff;
+  /* === BRAND COLOR PALETTE (Bright, Luminous, High-Contrast) === */
+  --brand-dark-navy: #0e4bc2;
+  --brand-navy: #155be8;
+  --brand-blue: #0077ff;
+  --brand-cyan: #00b4d8;
 
-  /* === CORPORATE COLOR PALETTE (Primary) === */
-  --h2-blue: #0085f4;
-  --h2-blue-light: #00bbff;
-  --h2-blue-dark: #004aad;
-  --h2-navy: #0004ad;
-  --h2-navy-mid: #004aad;
-  --h2-white: #fff;
-  --h2-grey: #f5f7fa;
-  --h2-grey-mid: #e2e8f0;
-  --h2-text: #0004ad;
-  --h2-text-muted: #004aad;
+  /* === CORPORATE COLOR PALETTE (Vibrant Industrial Theme - NO DARK BLACK) === */
+  --h2-blue: #0077ff;
+  --h2-blue-light: #00b4d8;
+  --h2-blue-dark: #0047cc;
+  --h2-navy: #0e459e;
+  --h2-navy-mid: #1456c7;
+  --h2-white: #ffffff;
+  --h2-grey: #f4f8fe;
+  --h2-grey-mid: #d6e6fe;
+  --h2-text: #0b2545;
+  --h2-text-muted: #2d5584;
 
-  /* === ACCENT (Use sparingly — CTAs, hover, highlights ONLY) === */
-  --accent-orange: #e65100;
-  --accent-orange-hover: #bf360c;
+  /* === ACCENT === */
+  --accent-orange: #ff5500;
+  --accent-orange-hover: #e04800;
 
   /* === ALIASES for backward compatibility === */
   --primary-dark: var(--h2-navy);
-  --primary-royal: var(--h2-blue-dark);
+  --primary-royal: var(--h2-navy-mid);
   --primary-steel: var(--h2-blue);
-  --primary-light: #e3f2fd;
+  --primary-light: #e8f3ff;
   --neutral-white: var(--h2-white);
   --neutral-light-gray: var(--h2-grey);
   --neutral-mid-gray: var(--h2-grey-mid);
@@ -170,9 +170,9 @@ div[id] {
   z-index: 0;
 }
 
-/* ─────────────── Blueprint Dark Background ─────────────── */
+/* ─────────────── Blueprint Bright Background ─────────────── */
 .blueprint-bg {
-  background-color: var(--h2-navy);
+  background: linear-gradient(135deg, #093780 0%, #114cba 50%, #0066ff 100%);
   position: relative;
 }
 
@@ -181,8 +181,8 @@ div[id] {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(33, 150, 243, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(33, 150, 243, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
   background-size: 40px 40px;
   pointer-events: none;
   z-index: 0;

@@ -14,23 +14,51 @@ const scrollTo = (id) => {
 export default function Footer() {
   const links = {
     Company: [
-      ["about", "About Us"], ["process", "Our History"],
-      ["facility", "Manufacturing Facility"], ["advantages", "Certifications"],
-      ["advantages", "Quality Assurance"], ["downloads", "Careers"],
+      ["about", "About Us"],
+      ["process", "Our History & Legacy"],
+      ["facility", "Manufacturing Facility"],
+      ["advantages", "Certifications & Standards"],
+      ["advantages", "Quality Assurance"],
+      ["advantages", "ESG & Sustainability"],
+      ["advantages", "Safety & Compliance"],
+      ["process", "Research & Development"],
+      ["supply-map", "Global Partner Network"],
+      ["downloads", "Careers & Hiring"],
     ],
     Products: [
-      ["products", "Steel Molds"], ["products", "EPS Foam Products"],
-      ["products", "Custom Molds"], ["categories", "Precast Solutions"],
-      ["explorer", "Accessories"], ["products", "All Products"],
+      ["products", "Steel Box Culvert Molds"],
+      ["products", "EPS Void Formers"],
+      ["products", "Manhole & Catch Basin Molds"],
+      ["products", "Retaining Wall Panel Forms"],
+      ["products", "U-Drain & Trench Channels"],
+      ["products", "Structural Column & Beam Molds"],
+      ["products", "Custom Magnetic Shuttering"],
+      ["products", "EPS Architectural Cornices"],
+      ["products", "Precast Accessories"],
+      ["products", "Complete Mold Machinery"],
     ],
     Industries: [
-      ["industries", "Infrastructure"], ["industries", "Metro & Transit"],
-      ["industries", "Bridges & Roads"], ["industries", "Building Construction"],
-      ["industries", "Public Works"], ["industries", "Precast Plants"],
+      ["industries", "Stormwater & Infrastructure"],
+      ["industries", "Highway & Bridge Construction"],
+      ["industries", "Underground Power & Telecom"],
+      ["industries", "Commercial Buildings"],
+      ["industries", "Railway & Transit Systems"],
+      ["industries", "Water Treatment"],
+      ["industries", "Marine & Seawall Forms"],
+      ["industries", "Agricultural Precast"],
+      ["industries", "Residential Systems"],
+      ["industries", "Modular Vaults"],
     ],
     Engineering: [
-      ["process", "Design Process"], ["process", "Custom Development"],
-      ["how-it-works", "Manufacturing Process"], ["advantages", "Materials & Standards"],
+      ["process", "3D CAD & BIM Modeling"],
+      ["process", "FEA Stress Analysis"],
+      ["process", "Custom Mold Engineering"],
+      ["how-it-works", "Self-Curing Steam Jackets"],
+      ["how-it-works", "Pneumatic & Hydraulics"],
+      ["advantages", "Steel Grades & Materials"],
+      ["process", "On-Site Cast Trials"],
+      ["how-it-works", "Automated Stripping"],
+      ["process", "Precision CNC Machining"],
       ["process", "Technical Support"],
     ],
   };
@@ -93,15 +121,17 @@ export default function Footer() {
               <li className={styles.contactItem}>
                 <MapPin className={styles.contactIcon} size={15} />
                 <span className={styles.contactText}>
-                  123 Industrial Dr.<br />
-                  Deer Park, NY 11729, USA
+                  <strong>SOUTH OFFICE</strong><br />
+                  850 NW FEDERAL HWY<br />
+                  STUART, FL 34994
                 </span>
               </li>
               <li className={styles.contactItem}>
                 <Phone className={styles.contactIcon} size={15} />
-                <a href="tel:+16315550142">+1 (631) 555-0142</a>
+                <a href="tel:+17722970700">(772) 297-0700</a>
               </li>
-              <li className={styles.contactItem}>
+
+              <li className={`${styles.contactItem} ${styles.locationDivider}`}>
                 <Mail className={styles.contactIcon} size={15} />
                 <a href="mailto:info@precastsolutions.com">info@precastsolutions.com</a>
               </li>
